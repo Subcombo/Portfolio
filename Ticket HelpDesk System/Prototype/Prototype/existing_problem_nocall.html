@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Ticket #0010</title>
+
+    <style type="text/css">
+      .icon-danger { color: #CC0000; }
+      .icon-warning { color: #ffbb33; }
+      .icon-success { color: #007E33; }
+      a.glyphicon {
+        color: #000;
+        cursor: pointer;
+      }
+      a.glyphicon:hover {
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- for RTL support -->
+    <!--<link rel="stylesheet" href="http://cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">-->
+    <link href="fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar"><span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Make-It-All</a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <p class="navbar-text">Existing Problem</p>
+          <div class="navbar-right">
+            <p class="navbar-text">Logged in as <b>Alice Brooks</b> (Operator)</p>
+            <div class="btn-group navbar-btn">
+              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-log-out"></span> Log out</button>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;Enter accessibility mode</a></li>
+              </ul>
+            </div>
+            <p class="navbar-text visible-xs">&nbsp;</p> <!-- a bit of a hack -->
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <h4>Ticket #0010</h4>
+      <hr>
+      <div class="tab-content" id="ticket_details">
+        <form class="form-horizontal">
+          <div class="col-md-6">
+            <div class="form-group"> <!-- General Problem Tag -->
+              <label class="col-md-4 text-right" for="notes">General Problem Tag:</label>
+              <div class="col-md-8">
+                <p>Other peripherals</p>
+              </div>
+            </div>
+
+            <div class="form-group"> <!-- Specific Problem Tag -->
+              <label class="col-md-4 text-right" for="specific_tag">Problem-Specific Tag:</label>
+              <div class="col-md-8">
+                <p>Wireless mouse not working</p>
+              </div>
+            </div>
+
+            <div class="form-group"> <!-- Notes -->
+              <label class="col-md-4 text-right" for="notes">Notes:</label>
+              <div class="col-md-8">
+                Wireless #bluetooth #mouse is not working. Batteries seem okay, the bluetooth is turned on.
+              </div>
+            </div>
+            <br/>
+            <div class="table-responsive" id="windows_entry">
+              <table class="table table-hover table-condensed"> <!-- Software List -->
+                <tr>
+                  <th>Software Name</th>
+                  <th>Version</th>
+                  <th>Registration No.</th>
+                  <th>ID No.</th>
+                  <th><abbr title="Supported">Spt.</abbr></th>
+                </tr>
+                <tr>
+                  <td>Microsoft Windows</td>
+                  <td>10</td>
+                  <td><i>not provided</i></td>
+                  <td><i>N/A</i></td>
+                  <td class="text-center"><span class="glyphicon glyphicon-question-sign icon-warning"></span></td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="table-responsive" id="logitech_entry">
+              <table class="table table-hover table-condensed"> <!-- Hardware List -->
+                <tr>
+                  <th>Hardware Type</th>
+                  <th>Make</th>
+                  <th>Model</th>
+                  <th>Serial No.</th>
+                  <th>ID No.</th>
+                  <th><abbr title="Supported">Spt.</abbr></th>
+                </tr>
+                <tr>
+                  <td>Mouse</td>
+                  <td>Logitech</td>
+                  <td>G5</td>
+                  <td>ABC123</td>
+                  <td>0122</td>
+                  <td class="text-center"><span class="glyphicon glyphicon-ok-sign icon-success"></span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <hr class="visible-sm-block">
+          <div class="col-md-6">
+            <div class="form-group"> <!-- Similar problems -->
+              <label class="col-md-4 control-label" for="similar_dropdown">Callers:</label>
+              <div class="col-md-8">
+                <select id="similar_dropdown" name="similar_dropdown" class="form-control selectpicker" data-live-search="true">
+                  <option selected>Dilip McPhilip (15/11/2016 11:53)</option>
+                </select>
+                <table class="table table-hover table-condensed" style="margin-bottom: 0px;">
+                  <tr><th style="border:none;">Employee ID</th><td style="border:none;">E8200</td></tr>
+                  <tr><th>Email</th><td>Dilip@makeitall.com</td></tr>
+                  <tr><th>Phone</th><td>07865748321</td></tr>
+                  <tr><th>Department</th><td>Office</td></tr>
+                  <tr><th>Job Title</th><td>Junior</td></tr>
+                  <tr><th>Location</th><td>UK</td></tr>
+                </table>
+              </div>
+            </div>
+            <hr>
+            <div class="form-group"> <!-- Notes -->
+              <label class="col-md-4 control-label" for="notes">Comments:</label>
+              <div class="col-md-8">
+                <textarea id="comment" name="comment" placeholder="Printer shreds only prime numbered pages" class="form-control input-md"></textarea>
+              </div>
+            </div>
+            <div class="text-right">
+              <button class="btn btn-primary btn-sm" type="button" id="send_spec_btn">
+                <span class="glyphicon glyphicon-send"></span>&ensp;Add comments
+              </button>
+            </div>
+            <hr>
+            <div class="form-group" id="refer"> <!-- Similar problems -->
+              <label class="col-md-4 control-label" for="notes">Refer to Specialist:</label>
+              <div class="col-md-8">
+                <div class="input-group">
+                  <span class="form-control" id="specialist_choice">Bert Burton (London)</span>
+                  <span class="input-group-btn">
+                    <button disabled id="spec_choose_btn" class="btn btn-default" type="button">Choose...</button>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <button class="btn btn-primary btn-sm" type="button" id="send_spec_btn" disabled>
+                <span class="glyphicon glyphicon-share-alt"></span> Sent 11/11/2016, 12:34:56
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+  </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="bootstrap-typeahead/bootstrap3-typeahead.min.js"></script>
+    <script src="jquery-textcomplete/jquery.textcomplete.min.js"></script>
+    <script src='autosize/autosize.min.js'></script>
+  	<script>
+  		autosize(document.querySelectorAll('textarea'));
+
+      $('#comment').textcomplete([{
+        match: /(^|\s|\\b)#(\w*)$/,
+        search: function (term, callback) {
+          var words = [term, 'desperatecaller', 'shreddedpaper', 'urgent', 'mouse', 'logitech'];
+          if (term.length >= 2 && words.indexOf(term) == -1) words.unshift(term);
+          callback($.map(words, function (word) {
+            return word.toLowerCase().indexOf(term.toLowerCase()) != -1 ? word : null;
+          }));
+        },
+        replace: function (word) {
+          return '$1#' + word + ' ';
+        },
+        template: function (value, term) {
+          var termPos = value.toLowerCase().indexOf(term.toLowerCase());
+          return '#' + value.substring(0, termPos) + '<u>' + term + '</u>' + value.substr(termPos + term.length);
+        }
+      }]);
+
+      $("#software_modal_name").typeahead({
+        "source" : ["Microsoft Windows", "Microsoft Word", "Microsoft Excel", "Microsoft Access", "Microsoft Edge", "Mozilla Firefox", "Apple Safari", "Apple macOS", "Spotify"]
+      });
+      $("#software_modal_version").typeahead({
+        "source" : ["XP", "7", "10"]
+      });
+      $("#software_modal_regno").typeahead({
+        "source" : ["HS7FE-S7D6F-HJS73-JS738-NS823", "JSUE3-NSK26-MKAY7S-MASHE-KS723"]
+      });
+
+      $("#hardware_modal_type").typeahead({
+        "source" : ["Mouse", "Keyboard", "Smartphone", "Personal Computer"]
+      });
+      $("#hardware_modal_make").typeahead({
+        "source" : ["Hewlett-Packard", "Dell", "Apple", "Lenovo", "Logitech"]
+      });
+      $("#hardware_modal_model").typeahead({
+        "source" : ["G5", "MX Master", "MX Anywhere", "Party Collection", "Trackman Marble"]
+      });
+      $("#hardware_modal_serno").typeahead({
+        "source" : ["ABC123", "DEF465", "OMG098"]
+      });
+
+      $("#save_hw").on('click', function(e) {
+        $("#logitech_entry").css('display', 'block');
+        $("#similar_desc_formgroup").css('display', 'block');
+        $("#solution_formgroup").css('display', 'block');
+        $("#general_tag").attr('title', "Select to show (found 2)");
+        $("#similar_dropdown").selectpicker('val', '#62734 – Mouse not working');
+      });
+
+      $("#save_sw").on('click', function(e) {
+        $("#windows_entry").css('display', 'block');
+      });
+
+      $("#hardware_modal_serno").on('change', function(e)
+      {
+        if ($("#hardware_modal_serno").val() == "ABC123")
+        {
+          $("#hardware_modal_model").val('G5');
+        }
+      });
+
+      $("#sel_spec").on('click', function(e) {
+        $('#specialist_choice').html('Bert Burton (London)');
+      });
+      $("#search").on("keyup", function() {
+      var fn = $("#search").val();
+      if (fn == "Emma"){
+        $("#section2").css('display', 'none');
+        $("#section6").css('display', 'none');
+        $("#section7").css('display', 'none');
+        $("#section3").css('display', 'none');
+      }
+      else if (fn == "Emma 12/20/2016") {
+        $("#section1").css('display', 'none');
+        $("#section2").css('display', 'none');
+        $("#section3").css('display', 'none');
+        $("#section4").css('display', 'none');
+        $("#section5").css('display', 'none');
+        $("#section6").css('display', 'none');
+        $("#section7").css('display', 'none');
+      }
+      else if (fn == "Emma 10/20/2016") {
+        $("#section1").css('display', 'none');
+        $("#section2").css('display', 'none');
+        $("#section3").css('display', 'none');
+        $("#section5").css('display', 'none');
+        $("#section6").css('display', 'none');
+        $("#section7").css('display', 'none');
+      }
+      else if (fn == "Emma 10/20/2016") {
+        $("#section1").css('display', 'none');
+        $("#section2").css('display', 'none');
+        $("#section3").css('display', 'none');
+        $("#section5").css('display', 'none');
+        $("#section6").css('display', 'none');
+        $("#section7").css('display', 'none');
+      }
+      else if (fn == "0010" || fn == "10" || fn == "#0010") {
+        $("#section1").css('display', 'none');
+        $("#section2").css('display', 'none');
+        $("#section3").css('display', 'none');
+        $("#section4").css('display', 'none');
+        $("#section6").css('display', 'none');
+        $("#section7").css('display', 'none');
+        $("#ticket").css('display', 'none');
+      }
+      else {
+        $("#section1").css('display', 'inline');
+        $("#section2").css('display', 'inline');
+        $("#section3").css('display', 'inline');
+        $("#section4").css('display', 'inline');
+        $("#section5").css('display', 'inline');
+        $("#section6").css('display', 'inline');
+        $("#section7").css('display', 'inline');
+        $("#ticket").css('display', 'inline');
+      }
+    });
+  	</script>
+  </body>
+</html>

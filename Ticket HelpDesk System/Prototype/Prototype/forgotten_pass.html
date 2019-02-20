@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Reset Password</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="login_style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      body{
+        font-family:sans-serif;
+      }
+    </style>
+
+  </head>
+  <body>
+    <!--Success alert for forgotten password email reset request -->
+    <div class = "alert alert-success" style="display:none" id="alert"><Strong>Email sent.</strong></div>
+
+    <div class="jumbotron">
+      <a class="btn btn-xs btn-default" href="login.html" role="button" style="float:left;font-size:16px;solid #e5e5e5;margin:20px" id="back">Back</a>
+      <form class="form-signin" action="javascript:success()">
+        <h2 style="font-size:50px;padding-bottom: 50px;
+        border-bottom: 1px solid #e5e5e5;">Reset Password</h2>
+        <h2>Enter Username:</h2>
+        <input type="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+        <button class="btn btn-xs btn-default" type="submit" id="btnSend" style="margin:20px">Send email link</button>
+      </form>
+
+    </div>
+
+    <script type="text/javascript">
+      function success(){
+        document.getElementById("alert").style.display = "block";
+        document.getElementById("inputUsername").blur();
+        document.getElementById("back").focus();
+        document.getElementById("inputUsername").value = "";
+        document.getElementById("btnSend").disabled = true;
+        document.getElementById("inputUsername").disabled = true;
+      }
+
+    </script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

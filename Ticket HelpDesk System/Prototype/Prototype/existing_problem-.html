@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Existing Problem</title>
+
+    <style type="text/css">
+      .icon-danger { color: #CC0000; }
+      .icon-warning { color: #ffbb33; }
+      .icon-success { color: #007E33; }
+      a.glyphicon {
+        color: #000;
+        cursor: pointer;
+      }
+      a.glyphicon:hover {
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- for RTL support -->
+    <!--<link rel="stylesheet" href="http://cdn.rawgit.com/morteza/bootstrap-rtl/v3.3.4/dist/css/bootstrap-rtl.min.css">-->
+    <link href="fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar"><span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Make-It-All</a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-navbar">
+          <p class="navbar-text">Call with <b>Emma Haas</b> / New Problem</p>
+          <div class="navbar-right">
+            <p class="navbar-text">Logged in as <b>Alice Brooks</b> (Operator)</p>
+            <div class="btn-group navbar-btn">
+              <a href="login.html" type="button" class="btn btn-default"><span class="glyphicon glyphicon-log-out"></span> Log out</a>
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;Enter accessibility mode</a></li>
+              </ul>
+            </div>
+            <p class="navbar-text visible-xs">&nbsp;</p> <!-- a bit of a hack -->
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <form class="form-horizontal">
+        <div class="col-md-6">
+          <div class="form-group"> <!-- General Problem Tag -->
+            <label class="col-md-4 control-label" for="general_tag">General Problem Tag:</label>
+            <div class="col-md-8">
+              <input placeholder="Printer" class="form-control input-md" disabled>
+
+            </div>
+          </div>
+
+          <div class="form-group"> <!-- Specific Problem Tag -->
+            <label class="col-md-4 control-label" for="specific_tag">Problem-Specific Tag:</label>
+            <div class="col-md-8">
+              <input id="specific_tag" name="specific_tag" type="text" placeholder="Printer shredding paper" class="form-control input-md" disabled>
+            </div>
+          </div>
+
+          <div class="form-group"> <!-- Notes -->
+            <label class="col-md-4 control-label" for="notes">Notes:</label>
+            <div class="col-md-8">
+              <textarea id="notes" name="notes" placeholder="Printer shreds only prime numbered pages" class="form-control input-md" disabled></textarea>
+            </div>
+          </div>
+
+          <div class="form-group"> <!-- Similar problems -->
+            <label class="col-md-4 control-label" for="notes">Similar&nbsp;problems:</label>
+            <div class="col-md-8">
+              <input id="general_tag" name="general_tag" placeholder="#62734 – Bootcamp doesn't recognise partition" class="form-control selectpicker" disabled>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="table-responsive">
+            <table class="table table-hover table-condensed"> <!-- Software List -->
+              <tr>
+                <th>Software Name</th>
+                <th>Version</th>
+                <th>Registration No.</th>
+                <th>ID No.</th>
+                <th><abbr title="Supported">Spt.</abbr></th>
+              </tr>
+              <tr>
+                <td>Microsoft Office</td>
+                <td>2016</td>
+                <td><abbr title="HS7FE-S7D6F-HJS73-JS738-NS823">HS7FE-…-NS823</abbr></td>
+                <td>726328</td>
+                <td class="text-center"><span class="glyphicon glyphicon-ok-sign icon-success"></span></td>
+              </tr>
+              <tr>
+                <td>Microsoft Windows</td>
+                <td>10</td>
+                <td><abbr title="HS7FE-S7D6F-HJS73-JS738-NS823">J2DF7-…-LW889</abbr></td>
+                <td>283942</td>
+                <td class="text-center"><span class="glyphicon glyphicon-remove-sign icon-danger"></span></td>
+              </tr>
+              <tr>
+                <td>Autodesk</td>
+                <td>3ds Max</td>
+                <td></td>
+                <td></td>
+                <td class="text-center"><span class="glyphicon glyphicon-question-sign icon-warning"></span></td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-hover table-condensed"> <!-- Hardware List -->
+              <tr>
+                <th>Hardware Type</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Serial No.</th>
+                <th>ID No.</th>
+                <th><abbr title="Supported">Spt.</abbr></th>
+              </tr>
+              <tr>
+                <td>Mouse</td>
+                <td>Apple</td>
+                <td>Magic Mouse</td>
+                <td>SDRG4354328</td>
+                <td>283749</td>
+                <td class="text-center"><span class="glyphicon glyphicon-ok-sign icon-success"></span></td>
+              </tr>
+              <tr>
+                <td>Keyboard</td>
+                <td>Apple</td>
+                <td>Mighty Keyboard</td>
+                <td>XKE38492834</td>
+                <td>927465</td>
+                <td class="text-center"><span class="glyphicon glyphicon-remove-sign icon-danger"></span></td>
+              </tr>
+              <tr>
+                <td>PC</td>
+                <td>Apple</td>
+                <td>iMac '16</td>
+                <td></td>
+                <td></td>
+                <td class="text-center"><span class="glyphicon glyphicon-question-sign icon-warning"></span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Software Modal-->
+    <div class="modal fade" id="software_modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Add New Piece of Software</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal">
+              <div class="form-group"><!-- Software Name -->
+                <label class="col-md-4 control-label" align="right">Name:</label>
+                <div class="col-md-7" align="left"><input id="software_modal_name" class="form-control input-md" type="text" data-provide="typeahead"></div>
+              </div>
+              <div class="form-group"><!-- Version -->
+                <label class="col-md-4 control-label" align="right">Version:</label>
+                <div class="col-md-7" align="left"><input id="software_modal_version" class="form-control input-md" type="text" data-provide="typeahead"></div>
+              </div>
+              <div class="form-group"><!-- Registration No. -->
+                <label class="col-md-4 control-label" align="right">Registration No.:</label>
+                <div class="col-md-7" align="left"><input id="software_modal_regno" class="form-control input-md" type="text" data-provide="typeahead"></div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hardware Modal-->
+    <div class="modal fade" id="hardware_modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Add New Piece of Hardware</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal">
+              <div class="form-group"><!-- Type -->
+                <label class="col-md-4 control-label" align="right">Type:</label>
+                <div class="col-md-7" align="left"><input id="hardware_modal_type" class="form-control input-md" type="text" data-provide="typeahead"></div>
+              </div>
+              <div class="form-group"><!-- Make -->
+                <label class="col-md-4 control-label" align="right">Make:</label>
+                <div class="col-md-7" align="left"><input id="hardware_modal_make" class="form-control input-md" type="text" data-provide="typeahead"></div>
+              </div>
+              <div class="form-group"><!-- Modela -->
+                <label class="col-md-4 control-label" align="right">Model:</label>
+                <div class="col-md-7" align="left"><input id="hardware_modal_model" class="form-control input-md" type="text" data-provide="typeahead"></div>
+              </div>
+              <div class="form-group"><!-- Serial No. -->
+                <label class="col-md-4 control-label" align="right">Serial No.:</label>
+                <div class="col-md-7" align="left"><input id="hardware_modal_serno" class="form-control input-md" type="text" data-provide="typeahead"></div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="bootstrap-typeahead/bootstrap3-typeahead.min.js"></script>
+    <script src='autosize/autosize.min.js'></script>
+  	<script>
+  		autosize(document.querySelectorAll('textarea'));
+
+      $("#software_modal_name").typeahead({
+        "source" : ["Microsoft Windows", "Microsoft Word", "Microsoft Excel", "Microsoft Access", "Microsoft Edge", "Mozilla Firefox", "Apple Safari", "Apple macOS", "Spotify"]
+      });
+      $("#software_modal_version").typeahead({
+        "source" : ["XP", "7", "10"]
+      });
+      $("#software_modal_regno").typeahead({
+        "source" : ["HS7FE-S7D6F-HJS73-JS738-NS823", "JSUE3-NSK26-MKAY7S-MASHE-KS723"]
+      });
+
+      $("#hardware_modal_type").typeahead({
+        "source" : ["Mouse", "Keyboard", "Smartphone", "Personal Computer"]
+      });
+      $("#hardware_modal_make").typeahead({
+        "source" : ["Hewlett-Packard", "Dell", "Apple", "Lenovo"]
+      });
+      $("#hardware_modal_model").typeahead({
+        "source" : ["MacBook Air '15", "MacBook Pro '15", "MacBook Air '16", "MacBook Pro '16"]
+      });
+      $("#hardware_modal_serno").typeahead({
+        "source" : ["C02NX04VWH62", "C23MX04FWSDC2"]
+      });
+  	</script>
+  </body>
+</html>
