@@ -1,0 +1,64 @@
+# README
+
+This is a repository for the Team Project of Team 001
+
+### hooks/post-receive
+
+This file is used to automatically put all the files from master in the repository to ~/../../web/.
+
+  #!/bin/sh
+  GIT_WORK_TREE=/var/www/clients/client1235/web1170/web git checkout -f
+  git checkout -f
+
+
+### What is what?
+
+- All of the FLOSS libraries we are using are accompanied by their licenses.
+- call_elements/ contains reusable PHP files for various features of this software,
+  like supporting equipment tables, similar solution box, and so on (despite the
+  name these are not only used in call.php, however the name has been left unchanged
+  for legacy reasons)
+  - Note for SEARCH_WIDGET:
+    to use it you need to implement to functions in javascript:
+      - override_get_url_for(call_id, selected_ticket) which should return
+        a url that will be navigated to upon pressing a result
+      - fill_category_and_specialist_for_search({ 'category' : x, 'specialist_id' : y })
+        where x is a category selection (viz. PHP-DB/api.php) and y is spec user id
+
+- localisation/ contains localisation files
+- login-toolkit/ contains login related, session management files
+- PHP-API/ contains various helper scripts in PHP relating to mainly AJAX
+- PHP-DB/ contains api.php, a file of functions binding our project to the SQL DB
+- PHP-Reusables/ contains PHP files included in all of the project pages,
+  these files ensure that all of the files needed in HTML are included,
+  and all the common libraries are loaded
+    - navbar.php: contains the top bootstrap bar.
+      What is important is that if we want to show the page title in the bar
+      we have to set $PAGE_TITLE variable
+    - header.php: script and style inclusions
+
+- call.php: allows the operator to manage the call and its tickets
+- employee_directory.php: summary of all employees registered in the DB
+- forgotten_pass.php: PHP script and website allowing the user request an email
+  with the link to reset their password
+- home.php: operators' home page
+- index.php: redirects to login.php
+- make_call.php: script that is invoked when the call needs to be created
+- open_tickets.php: lists of all the tickets (not necessarily open, however allows to check)
+- reset_password.php: PHP script and website allowing the user to reset their password
+- reset_token.php: a script and page where the user can actually reset their password,
+  provided they hold a valid reset link
+- specialist_home.php: specialists' home page
+- stats.php: displays statistics
+- ticket.php: displays ticket details (outside the call)
+
+
+### Who did what?
+
+- James F -- localisation and new call modal (home.php: suggestions, autofill, localisation/), parts of PHP-API/ and templates
+- Ashley Y -- accessibility mode (aka dark mode)
+- Kyle W -- bits of specialist home HTML
+- Tim S -- stats.php, accessibility mode (aka dark mode)
+- Eduardas V -- employee_directory.php, forgotten_pass.php, home.php, specialist_home.php, api.php, reset_token.php, open_tickets.php
+    created database tables.
+- Szymon Ł -- specialist and operator problem pages (call.php, ticket.php, call_elements/, parts of PHP-API/ and PHP-DB/) and this file
