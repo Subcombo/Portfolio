@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Open Tickets</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+    #plain {color:black;}
+    #plain:hover {color:grey;}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- Header -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar"><span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Make-It-All</a>
+          </div>
+          <div class="collapse navbar-collapse" id="main-navbar">
+            <p class="navbar-text">Home / Open Tickets</p>
+            <div class="navbar-right">
+              <p class="navbar-text">Logged in as <b>Alice Brooks</b> (Operator)</p>
+              <div class="btn-group navbar-btn">
+                <a href="login.html" type="button" class="btn btn-default"><span class="glyphicon glyphicon-log-out"></span> Log out</a>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#"><span class="glyphicon glyphicon-eye-open"></span>&nbsp;Enter accessibility mode</a></li>
+                </ul>
+              </div>
+              <p class="navbar-text visible-xs">&nbsp;</p> <!-- a bit of a hack -->
+            </div>
+          </div>
+        </div>
+      </nav>
+    <!-- back button -->
+    <div class="container">
+      <a type="button" class="btn btn-lg btn-default" href="home.html">
+          Back</a>
+    </div>
+    <!-- main body -->
+    <div class="container">
+      <div class="row">
+        <hr>
+          <div class="input-group">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><span  class="glyphicon glyphicon-search"></span></button>
+            </span>
+            <input id="search" type="text" class="input-group form-control" placeholder="Search for Ticket...">
+          </div>
+      </div>
+      <!-- displayed tickets -->
+      <hr>
+      <div class="container" style="overflow-y: scroll; position: absolute; bottom:20px; top:220px;">
+        <section id="section1" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    			<a id="plain" href="existing_problem_nocall.html"><div class="col-xs-12 col-sm-12 col-md-6">
+            <h3><strong class="text-danger">Ticket #0001<small> 04/20/2016 - 04:20 </small></strong></h3>
+    				<p>cant I install my Tiscali e-mail on windows 10.</p>
+    			</div></a>
+    			<a id="plain" href="existing_problem_nocall.html"><div class="col-xs-12 col-sm-12 col-md-6">
+            <h3><strong class="text-danger">Ticket #0002<small> 05/20/2016 - 04:20 </small></strong></h3>
+            <p>All connected and there is no signal on the monitor and no post beeps.</p>
+    			</div></a>
+        </section>
+        <section id="section2" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    			<a id="plain" href="existing_problem_nocall.html"><div class="col-xs-12 col-sm-12 col-md-6">
+            <h3><strong class="text-danger">Ticket #0003<small> 06/20/2016 - 02:20 </small></strong></h3>
+    				<p>Computer shutting down randomly. No error messages,nothing.
+              and it seems to happen randomly but happens consistently while using word.
+              Reinstalled windows twice and it seems to work for few days but then suddenly it
+              happens again.</p>
+    			</div></a>
+    			<a id="plain" href="existing_problem_nocall.html"><div class="col-xs-12 col-sm-12 col-md-6">
+            <h3><strong class="text-danger">Ticket #0004<small> 07/20/2016 - 16:20 </small></strong></h3>
+            <p>Keyboard only types shortcuts.</p>
+    			</div></a>
+        </section>
+        <section id="section3" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    			<a id="plain" href="existing_problem_nocall.html"><div class="col-xs-12 col-sm-12 col-md-6">
+            <h3><strong class="text-danger">Ticket #0005<small> 08/20/2016 - 17:20 </small></strong></h3>
+    				<p>Speakers don't provide sound, it is turned on and connected but not sound.</p>
+    			</div></a>
+    			<a id="plain" href="existing_problem_nocall.html"><div class="col-xs-12 col-sm-12 col-md-6">
+            <h3><strong class="text-danger">Ticket #0006<small> 09/20/2016 - 15:20 </small></strong></h3>
+            <p>Left click of the mouse does not work, right click works though.</p>
+    			</div></a>
+        </section>
+        <section id="section4" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    			<a id="plain" href="existing_problem_nocall.html"><div class="col-xs-12 col-sm-12 col-md-6">
+            <h3><strong class="text-danger">Ticket #0007<small> 10/20/2016 - 04:20 </small></strong></h3>
+    				<p>Computer slows down randomly. Ram usuage isn't affected,
+              and it seems to happen randomly but happens consistently while using powerpoint.
+              reinstalled windows twice and it seems to work for few days but then
+              suddenly it happens again.</p>
+    			</div></a>
+    			<a id="plain" href="existing_problem_nocall.html"><div class="col-xs-12 col-sm-12 col-md-6">
+            <h3><strong class="text-danger">Ticket #0008<small> 10/20/2016 - 04:20 </small></strong></h3>
+            <p>Computer gets BSOD. hard disk drive shows less memory,
+              and it seems to happen randomly but happens consistently while using Internet Explorer.
+              reinstalled windows twice and it seems to work for few days but then
+              suddenly it happens again.<p>
+    			</div></a>
+        </section>
+        <section id="section5"class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    			<a id="plain" href="existing_problem_nocall.html"><div id="ticket" class="col-xs-12 col-sm-12 col-md-6">
+            <h3><strong class="text-danger">Ticket #0009<small> 11/20/2016 - 04:20 </small></strong></h3>
+    				<p>iPad gets BSOD. It also works slow,
+              and it seems to happen randomly but happens consistently while using angry birds.
+              reinstalled iOS twice and it seems to work for few days but then
+              suddenly it happens again.</p>
+    			</div></a>
+    			<a id="plain" href="existing_problem_nocall.html"><div class="col-xs-12 col-sm-12 col-md-6">
+            <h3><strong class="text-danger">Ticket #0010<small> 11/20/2016 - 04:20 </small></strong></h3>
+            <p>Wireless bluetooth mouse is not working. Batteries seem okay, the bluetooth is turned on.<p>
+    			</div></a>
+        </section>
+        <section id="section6" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    			<a id="plain" href="existing_problem_nocall.html"><div class="col-xs-12 col-sm-12 col-md-6">
+            <h3><strong class="text-danger">Ticket #0011<small> 12/20/2016 - 01:20 </small></strong></h3>
+    				<p>TV gets BSOD. It also works slow,
+              and it seems to happen randomly but happens consistently while watching
+              The only way is essex. Reinstalled TV twice and it seems to work for few days but then
+              suddenly it happens again.</p>
+    			</div></a>
+    			<a id="plain" href="existing_problem_nocall.html"><div class="col-xs-12 col-sm-12 col-md-6">
+            <h3><strong class="text-danger">Ticket #0012<small> 12/20/2016 - 02:20 </small></strong></h3>
+            <p>Radio gets BSOD. Powered on,
+              and it seems to happen randomly but happens consistently while listening to Justin Bieber.
+              reinstalled Radio software twice and it seems to work for few hours but then
+              suddenly it happens again.<p>
+    			</div></a>
+        </section>
+        <section id="section7" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    			<a id="plain" href="existing_problem_nocall.html"><div class="col-xs-12 col-sm-12 col-md-6">
+            <h3><strong class="text-danger">Ticket #0013<small> 13/20/2016 - 03:20 </small></strong></h3>
+    				<p>Smart remote gets BSOD. unresponsive touch screen,
+              and it seems to happen randomly but happens consistently while trying to turn on telitubies.
+              Reinstalled TV twice and it seems to work for few days but then
+              suddenly it happens again.</p>
+    			</div></a>
+    			<a id="plain" href="existing_problem_nocall.html"><div class="col-xs-12 col-sm-12 col-md-6">
+            <h3><strong class="text-danger">Ticket #0014<small> 14/20/2016 - 05:20 </small></strong></h3>
+            <p>Radiator gets BSOD. Powered on,
+              and it seems to happen randomly but happens consistently while turning up.
+              reinstalled Radiator software twice and it seems to work for few hours but then
+              suddenly it happens again.<p>
+    			</div></a>
+        </section>
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+    $("#search").on("keyup", function() {
+    var fn = $("#search").val();
+    if (fn == "Emma"){
+      $("#section2").css('display', 'none');
+      $("#section6").css('display', 'none');
+      $("#section7").css('display', 'none');
+      $("#section3").css('display', 'none');
+    }
+    else if (fn == "Emma 12/20/2016") {
+      $("#section1").css('display', 'none');
+      $("#section2").css('display', 'none');
+      $("#section3").css('display', 'none');
+      $("#section4").css('display', 'none');
+      $("#section5").css('display', 'none');
+      $("#section6").css('display', 'none');
+      $("#section7").css('display', 'none');
+    }
+    else if (fn == "Emma 10/20/2016") {
+      $("#section1").css('display', 'none');
+      $("#section2").css('display', 'none');
+      $("#section3").css('display', 'none');
+      $("#section5").css('display', 'none');
+      $("#section6").css('display', 'none');
+      $("#section7").css('display', 'none');
+    }
+    else if (fn == "Emma 10/20/2016") {
+      $("#section1").css('display', 'none');
+      $("#section2").css('display', 'none');
+      $("#section3").css('display', 'none');
+      $("#section5").css('display', 'none');
+      $("#section6").css('display', 'none');
+      $("#section7").css('display', 'none');
+    }
+    else if (fn == "0010" || fn == "10" || fn == "#0010") {
+      $("#section1").css('display', 'none');
+      $("#section2").css('display', 'none');
+      $("#section3").css('display', 'none');
+      $("#section4").css('display', 'none');
+      $("#section6").css('display', 'none');
+      $("#section7").css('display', 'none');
+      $("#ticket").css('display', 'none');
+    }
+    else {
+      $("#section1").css('display', 'inline');
+      $("#section2").css('display', 'inline');
+      $("#section3").css('display', 'inline');
+      $("#section4").css('display', 'inline');
+      $("#section5").css('display', 'inline');
+      $("#section6").css('display', 'inline');
+      $("#section7").css('display', 'inline');
+      $("#ticket").css('display', 'inline');
+    }
+  });
+    </script>
+  </body>
+</html>
